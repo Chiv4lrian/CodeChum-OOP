@@ -1,0 +1,28 @@
+using System;
+
+namespace ArraySumAverage
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the size of the array: ");
+            int size = Convert.ToInt32(Console.ReadLine());
+
+            int[] array = new int[size];
+            int sum = 0;
+
+            for (int i = 0; i < size; i++)
+            {
+                Console.Write($"Enter element #{i + 1}: ");
+                array[i] = Convert.ToInt32(Console.ReadLine());
+                sum += array[i];
+            }
+
+            double average = (double)sum / size;
+
+            Console.WriteLine($"sum: {sum}");
+            Console.WriteLine($"average: {average:0.00}");
+        }
+    }
+}

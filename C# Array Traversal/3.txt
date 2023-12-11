@@ -1,0 +1,41 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter the size of the array: ");
+        int size = Convert.ToInt32(Console.ReadLine());
+
+        int[] array = new int[size];
+
+        Console.Write("Enter the elements of the array:\n");
+        for (int i = 0; i < size; i++)
+        {
+            Console.Write($"Enter element #{i + 1}: ");
+            array[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+        Console.Write("Enter a value to search for: ");
+        int valueToSearch = Convert.ToInt32(Console.ReadLine());
+
+        bool found = false;
+        foreach (int num in array)
+        {
+            if (num == valueToSearch)
+            {
+                found = true;
+                break;
+            }
+        }
+
+        if (found)
+        {
+            Console.WriteLine("Found!");
+        }
+        else
+        {
+            Console.WriteLine($"Sorry, {valueToSearch} not found.");
+        }
+    }
+}
