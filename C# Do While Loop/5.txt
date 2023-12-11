@@ -1,0 +1,16 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int target = 0, sum = 0;
+        Console.WriteLine("Enter an integer:");
+        do{
+        target = int.Parse(Console.ReadLine());
+        sum+=target;
+        if(target == 0) break;
+        }while(true);
+        Console.WriteLine("Total Sum: "+sum);
+    }
+}
