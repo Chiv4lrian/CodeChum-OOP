@@ -1,0 +1,39 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter number of rows: ");
+        int rows = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter number of columns: ");
+        int columns = int.Parse(Console.ReadLine());
+
+        int[,] multiArray = new int[rows, columns];
+
+        for (int row = 0; row < rows; row++)
+        {
+            for (int col = 0; col < columns; col++)
+            {
+                Console.Write($"Enter element at row {row}, column {col}: ");
+                multiArray[row, col] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        int largest = multiArray[0, 0];
+
+        for (int row = 0; row < multiArray.GetLength(0); row++)
+        {
+            for (int col = 0; col < multiArray.GetLength(1); col++)
+            {
+                if (multiArray[row, col] > largest)
+                {
+                    largest = multiArray[row, col];
+                }
+            }
+        }
+
+        Console.WriteLine($"Largest: {largest}");
+    }
+}

@@ -1,0 +1,62 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        
+        Console.Write("Enter number of rows: ");
+        int rows = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter number of columns: ");
+        int columns = int.Parse(Console.ReadLine());
+
+        int[,] multiArray = new int[rows, columns];
+
+        for (int row = 0; row < rows; row++)
+        {
+            for (int col = 0; col < columns; col++)
+            {
+                Console.Write($"Enter element at row {row}, column {col}: ");
+                multiArray[row, col] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        Console.Write("Divisible by 3: ");
+        bool divisibleBy3Exists = false;
+        for (int row = 0; row < rows; row++)
+        {
+            for (int col = 0; col < columns; col++)
+            {
+                if (multiArray[row, col] % 3 == 0)
+                {
+                    if (divisibleBy3Exists)
+                    {
+                        Console.Write(", ");
+                    }
+                    Console.Write($"{multiArray[row, col]}");
+                    divisibleBy3Exists = true;
+                }
+            }
+        }
+        Console.WriteLine();
+        Console.Write("Divisible by 5: ");
+        bool divisibleBy5Exists = false;
+        for (int row = 0; row < rows; row++)
+        {
+            for (int col = 0; col < columns; col++)
+            {
+                if (multiArray[row, col] % 5 == 0)
+                {
+                    if (divisibleBy5Exists)
+                    {
+                        Console.Write(", ");
+                    }
+                    Console.Write($"{multiArray[row, col]}");
+                    divisibleBy5Exists = true;
+                }
+            }
+        }
+        Console.WriteLine();
+    }
+}
