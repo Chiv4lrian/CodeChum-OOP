@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+    static public void Main()
+    {
+        int x, y;
+
+        Console.Write("Enter element x: ");
+        x = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter element y: ");
+        y = int.Parse(Console.ReadLine());
+
+        while (x <= y)
+        {
+            Console.WriteLine(x);
+            if (x % 11 == 0) break;
+            x += 1;
+        }
+    }
+}

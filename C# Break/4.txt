@@ -1,0 +1,15 @@
+using System;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        while(true)
+        {
+            int n;
+            n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("You've inputted " + n);
+            if(n == 0) break;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+using System;
+
+class Program {
+    static public void Main()
+    {
+        while(true)
+        {
+            int a, b;
+            char op;
+
+            Console.Write("Enter a: ");
+            a = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter b: ");
+            b = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter operator: ");
+            op  = Console.ReadLine()[0];
+
+            if(op != '+' && op != '-' && op != '*' && op != '/') break;
+
+            if (op == '+')
+            {
+               Console.WriteLine(a + " + " + b + " = " + (a + b) + "\n");
+            }
+            else if (op == '-')
+            {
+               Console.WriteLine(a + " - " + b + " = " + (a - b) + "\n");
+            }
+            else if (op == '*')
+            {
+               Console.WriteLine(a + " * " + b + " = " + (a * b) + "\n");
+            }
+            else if (op == '/')
+            {
+               Console.WriteLine(a + " / " + b + " = " + (a / b) + "\n");
+            }
+
+        }
+    }
+}
