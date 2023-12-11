@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a value: ");
+        int remainingValue = int.Parse(Console.ReadLine());
+        Console.Write("\n");
+        while (remainingValue > 0)
+        {
+            Console.Write("Enter subtrahend: ");
+            int subtrahend = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"{remainingValue} - {subtrahend} = {remainingValue - subtrahend}");
+            remainingValue -= subtrahend;
+        }
+    }
+}
