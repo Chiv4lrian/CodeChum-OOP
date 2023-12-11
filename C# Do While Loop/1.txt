@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter an integer: ");
+        int n = int.Parse(Console.ReadLine());
+
+        int digitCount = 0;
+        int number = n;
+
+        do
+        {
+            digitCount++;
+            number /= 10;
+        } while (number != 0);
+
+        Console.WriteLine("Number of digits: " + digitCount);
+    }
+}

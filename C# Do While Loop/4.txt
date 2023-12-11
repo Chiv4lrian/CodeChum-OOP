@@ -1,0 +1,15 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+
+        char input;
+        do{
+            Console.Write("Do you still want to play [Y/N]: ");
+            input = Convert.ToChar(Console.ReadLine());
+            if(input != 'n' && input != 'N' && input != 'y' && input != 'Y') Console.WriteLine("Wrong answer");
+        }while(input != 'n' && input != 'N');
+    }
+}

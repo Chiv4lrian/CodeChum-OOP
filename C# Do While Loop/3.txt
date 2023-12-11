@@ -1,0 +1,18 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int target = 0, sum =0 ;
+        Console.Write("Enter target value: ");
+        int targetValue = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter the values: ");
+        do{
+        target = int.Parse(Console.ReadLine());
+        if(target == -1) break;
+        sum+=target;
+        }while(sum < targetValue);
+        Console.WriteLine("Sum: "+sum);
+    }
+}
