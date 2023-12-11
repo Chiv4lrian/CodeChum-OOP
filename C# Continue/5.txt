@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Enter an integer: ");
+        string input = Console.ReadLine();
+        int sum = 0;
+
+        foreach (char digit in input){
+            int num = (int)char.GetNumericValue(digit);
+            if (num % 3 == 0) continue;
+            sum += num;
+        }
+
+        Console.WriteLine("Sum of all digits: " + sum);
+    }
+}

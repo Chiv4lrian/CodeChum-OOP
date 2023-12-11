@@ -1,0 +1,16 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int sum = 0, input;
+        do{
+            Console.Write("Enter an integer: ");
+            input = Convert.ToInt32(Console.ReadLine());
+            if(input >= 10 && input<=99) continue;
+            sum += input;
+        }while(input != -1);
+        Console.WriteLine("Sum of Integers: " + sum);
+    }
+}
